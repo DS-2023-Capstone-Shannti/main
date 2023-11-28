@@ -20,7 +20,7 @@
         android:layout_width="200dp"
         android:layout_height="233dp"
         android:contentDescription="샨티메인이미지"
-        android:src="@drawable/shannti" />
+        android:src="@drawable/shanntiimage" />
 
 
     <android.widget.Button

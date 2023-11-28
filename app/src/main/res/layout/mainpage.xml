@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:color="#FFFFFF"
+    tools:context=".Mainpage">
+
+    <!-- SHANNTI 이미지를 추가하는 ImageView -->
+    <ImageView
+        android:id="@+id/shanntiImage"
+        android:layout_width="330dp"
+        android:layout_height="95dp"
+        android:src="@drawable/shannti"
+        android:background="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/profile"
+        android:layout_width="366dp"
+        android:layout_height="213dp"
+        android:layout_columnWeight="1"
+        android:background="@drawable/button_background"
+        android:gravity="center"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="194dp">
+
+        <ImageView
+            android:id="@+id/profileImage"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="16dp"
+            android:background="#FFFFFF"
+            android:contentDescription="Profile Image"
+            android:src="@drawable/oldwomen" />
+
+        <TextView
+            android:id="@+id/profileInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profileImage"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:text=" 샨티\n 54세"
+            android:textColor="#000000"
+            android:textSize="25sp" />
+    </LinearLayout>
+
+    <GridLayout
+        android:id="@+id/buttonContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:rowCount="2"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- 자세 교정 버튼 -->
+        <RelativeLayout
+            android:id="@+id/pose_detection"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:gravity="center">
+
+            <!-- 배경 원 -->
+            <ImageButton
+                android:id="@+id/posedetection_background"
+                android:layout_width="77dp"
+                android:layout_height="72dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/button_background"
+                android:contentDescription="자세교정 버튼"
+                android:src="@drawable/circle_background" />
+
+            <!-- 실제 이미지 -->
+            <ImageView
+                android:id="@+id/pose_image"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:scaleType="centerInside"
+                android:src="@drawable/exercise" />
+
+            <TextView
+                android:id="@+id/pose_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/posedetection_background"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:text="자세교정"
+                android:fontFamily="@font/myfont"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <!-- 운동 출석부 버튼 -->
+        <RelativeLayout
+            android:id="@+id/exercise_calendar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:gravity="center">
+
+            <!-- 배경 원 -->
+            <ImageButton
+                android:id="@+id/calendar_background"
+                android:background="@drawable/buttonback"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerInParent="true"
+                android:contentDescription="운동출석부 버튼"
+                android:src="@drawable/circle_background" />
+
+            <!-- 실제 이미지 -->
+            <ImageView
+                android:id="@+id/calendar_image"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:scaleType="centerInside"
+                android:src="@drawable/calendar" />
+
+            <TextView
+                android:id="@+id/calendar_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/calendar_background"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:text="운동출석부"
+                android:fontFamily="@font/myfont"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <!-- 사물 인식 버튼 -->
+        <RelativeLayout
+            android:id="@+id/object_detection"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:gravity="center">
+
+            <!-- 배경 원 -->
+            <ImageButton
+                android:id="@+id/objectdetection_background"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/buttonback"
+                android:contentDescription="사물인식운동 버튼"
+                android:src="@drawable/circle_background" />
+
+            <!-- 실제 이미지 -->
+            <ImageView
+                android:id="@+id/objectdetection_image"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:scaleType="centerInside"
+                android:src="@drawable/object" />
+
+            <TextView
+                android:id="@+id/objectdetection_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/objectdetection_background"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:text="사물 인식 운동"
+                android:fontFamily="@font/myfont"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <!-- 게임 버튼 -->
+        <RelativeLayout
+            android:id="@+id/game"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:gravity="center">
+
+            <!-- 배경 원 -->
+            <ImageButton
+                android:id="@+id/game_background"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/buttonback"
+                android:contentDescription="게임 버튼"
+                android:src="@drawable/circle_background" />
+
+            <!-- 실제 이미지 -->
+            <ImageView
+                android:id="@+id/game_image"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:scaleType="centerInside"
+                android:src="@drawable/game" />
+
+            <TextView
+                android:id="@+id/game_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/game_background"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:text="게임"
+                android:fontFamily="@font/myfont"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+        </RelativeLayout>
+    </GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
