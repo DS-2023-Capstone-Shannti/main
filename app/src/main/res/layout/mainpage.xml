@@ -9,13 +9,6 @@
     android:background="#E5F1D7"
     tools:context=".Mainpage">
 
-    <!-- SHANNTI 이미지를 추가하는 ImageView -->
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="android:fontstyle=&quot;bold&quot;" />
-
     <ImageView
         android:id="@+id/shanntiImage"
         android:layout_width="match_parent"
