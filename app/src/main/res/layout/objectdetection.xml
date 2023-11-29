@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Mainpage">
+
+    <!-- SHANNTI 이미지를 추가하는 ImageView -->
+    <ImageView
+        android:id="@+id/shanntiImage"
+        android:layout_width="330dp"
+        android:layout_height="95dp"
+        android:src="@drawable/shannti"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+
+
+            <!-- 간격 추가 -->
+            <Space
+                android:id="@+id/space"
+                android:layout_width="match_parent"
+                android:layout_height="480dp"
+                app:layout_constraintTop_toBottomOf="@+id/shanntiImage" />
+
+            <LinearLayout
+                android:id="@+id/buttonContainer"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/space">
+
+                <!-- 첫 번째 버튼 -->
+                <RelativeLayout
+                    android:id="@+id/pose_detection"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <!-- 배경 원 -->
+                    <ImageButton
+                        android:id="@+id/posedetection_background"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_centerInParent="true"
+                        android:background="?android:selectableItemBackground"
+                        android:contentDescription="자세교정 버튼"
+                        android:src="@drawable/circle_background" />
+
+                    <!-- 실제 이미지 -->
+                    <ImageView
+                        android:id="@+id/pose_image"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerInParent="true"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/exercise" />
+
+                    <TextView
+                        android:id="@+id/pose"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/posedetection_background"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="8dp"
+                        android:text="자세교정"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+
+                <!-- 두 번째 버튼 -->
+                <RelativeLayout
+                    android:id="@+id/exercise_calendar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <!-- 배경 원 -->
+                    <ImageButton
+                        android:id="@+id/calendar_background"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_centerInParent="true"
+                        android:background="?android:selectableItemBackground"
+                        android:contentDescription="운동출석부 버튼"
+                        android:src="@drawable/circle_background" />
+
+                    <!-- 실제 이미지 -->
+                    <ImageView
+                        android:id="@+id/calendar_image"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerInParent="true"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/calendar" />
+
+                    <TextView
+                        android:id="@+id/calendar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/calendar_background"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="8dp"
+                        android:text="운동출석부"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <!-- 세 번째 버튼 -->
+                <RelativeLayout
+                    android:id="@+id/object_detection"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <!-- 배경 원 -->
+                    <ImageButton
+                        android:id="@+id/objectdetection_background"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_centerInParent="true"
+                        android:background="?android:selectableItemBackground"
+                        android:contentDescription="사물인식운동 버튼"
+                        android:src="@drawable/circle_background" />
+
+                    <!-- 실제 이미지 -->
+                    <ImageView
+                        android:id="@+id/objectdetection_image"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerInParent="true"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/object" />
+
+                    <TextView
+                        android:id="@+id/objectdetection"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/objectdetection_background"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="8dp"
+                        android:text="사물 인식 운동"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

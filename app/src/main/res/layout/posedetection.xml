@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    tools:context=".Mainpage">
+
+    <!-- 캘린더 제목 -->
+    <TextView
+        android:id="@+id/CalendarTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="자세 교정"
+        android:textSize="35sp"
+        android:textcolor="#7DDC55"
+        android:textStyle="bold"
+        android:fontFamily="@font/myfont"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintVertical_bias="0.1" />
+
+    <!-- 운동 이미지 -->
+    <ImageView
+        android:id="@+id/exerciseImage"
+        android:layout_width="0dp"
+        android:layout_height="230dp"
+        android:src="@drawable/exercise"
+        app:layout_constraintTop_toBottomOf="@id/CalendarTitle"
+        app:layout_constraintBottom_toTopOf="@id/cameraPreview"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintDimensionRatio="1:2" />
+
+    <!-- 카메라 미리보기 -->
+    <TextureView
+        android:id="@+id/cameraPreview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/exerciseImage" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -22,21 +22,20 @@
 
     <LinearLayout
         android:id="@+id/profile"
-        android:layout_width="366dp"
-        android:layout_height="213dp"
+        android:layout_width="359dp"
+        android:layout_height="262dp"
         android:layout_columnWeight="1"
         android:background="@drawable/button_background"
         android:elevation="20dp"
         android:gravity="center"
-        tools:layout_editor_absoluteX="22dp"
-        tools:layout_editor_absoluteY="154dp">
+        tools:layout_editor_absoluteX="26dp"
+        tools:layout_editor_absoluteY="135dp">
 
         <ImageView
             android:id="@+id/profileImage"
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_marginTop="0dp"
-            android:background="#FFFFFF"
             android:src="@drawable/oldwomen" />
 
         <TextView

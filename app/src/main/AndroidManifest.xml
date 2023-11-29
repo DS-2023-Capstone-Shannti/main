@@ -24,6 +24,9 @@
         <activity android:name=".LoginErrorActivity"/>
         <activity android:name=".FacePopupActivity"/>
         <activity android:name=".WelcomeActivity"/>
+        <activity android:name=".Calendar"/>
+        <activity android:name=".PoseDetection"/>
+        <activity android:name=".ObjectDetection"/>
     </application>
 
 </manifest>
