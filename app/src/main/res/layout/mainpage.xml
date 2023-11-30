@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:color="#FFFFFF"
-    android:background="#E5F1D7"
+    android:background="#E5E5E5"
     tools:context=".Mainpage">
 
     <ImageView
@@ -22,10 +22,10 @@
 
     <LinearLayout
         android:id="@+id/profile"
-        android:layout_width="359dp"
-        android:layout_height="262dp"
+        android:layout_width="328dp"
+        android:layout_height="428dp"
         android:layout_columnWeight="1"
-        android:background="@drawable/button_background"
+        android:background="#999999"
         android:elevation="20dp"
         android:gravity="center"
         tools:layout_editor_absoluteX="26dp"
@@ -46,7 +46,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginLeft="50dp"
             android:layout_marginTop="8dp"
-            android:text=" 샨티\n 54세"
+            android:text=" 샨티님\n오늘도 좋은 하루 되세요"
             android:textColor="#000000"
             android:textSize="25sp"
             android:textStyle="bold" />

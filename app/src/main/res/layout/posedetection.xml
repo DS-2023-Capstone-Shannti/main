@@ -6,31 +6,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="15dp"
-    tools:context=".Mainpage">
+    tools:context=".PoseDetection">
 
-    <!-- 캘린더 제목 -->
+    <!-- 페이지 제목 -->
     <TextView
-        android:id="@+id/CalendarTitle"
+        android:id="@+id/pageTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="자세 교정"
+        android:text="스쿼트"
         android:textSize="35sp"
-        android:textcolor="#7DDC55"
+        android:textColor="#000"
         android:textStyle="bold"
         android:fontFamily="@font/myfont"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintVertical_bias="0.1" />
 
     <!-- 운동 이미지 -->
     <ImageView
         android:id="@+id/exerciseImage"
-        android:layout_width="0dp"
+        android:layout_width="400dp"
         android:layout_height="230dp"
         android:src="@drawable/exercise"
-        app:layout_constraintTop_toBottomOf="@id/CalendarTitle"
+        app:layout_constraintTop_toBottomOf="@id/pageTitle"
         app:layout_constraintBottom_toTopOf="@id/cameraPreview"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -39,11 +39,43 @@
     <!-- 카메라 미리보기 -->
     <TextureView
         android:id="@+id/cameraPreview"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="400dp"
+        android:layout_height="300dp"
+        app:layout_constraintBottom_toTopOf="@id/countText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/exerciseImage" />
+        app:layout_constraintTop_toBottomOf="@id/exerciseImage"
+        app:layout_constraintDimensionRatio="1:2" />
 
+    <!-- 카운트 텍스트 -->
+
+    <!-- 페이지 제목 -->
+
+    <TextView
+        android:id="@+id/countText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="45"
+        android:textColor="#000000"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.273"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cameraPreview" />
+
+    <TextView
+        android:id="@+id/pose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="612dp"
+        android:fontFamily="@font/myfont"
+        android:text="GREAT"
+        android:textColor="#000"
+        android:textSize="52sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.723"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
