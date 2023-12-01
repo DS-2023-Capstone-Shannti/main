@@ -1,0 +1,5 @@
+<!-- res/drawable/button_background.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <solid android:color="#78D15F" /> <!-- 원하는 배경색을 여기에 지정 -->
+    <corners android:radius="50dp" /> <!-- 버튼의 모서리를 둥글게 만들기 위해 사용 -->
+</shape>

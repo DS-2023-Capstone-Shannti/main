@@ -1,5 +1,5 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="rectangle">
     <corners android:radius="30dp" /> <!-- 크기에 맞춰 조절 -->
-    <solid android:color="#D8EFA6" />
+    <solid android:color="#78D15F" />
 </shape>

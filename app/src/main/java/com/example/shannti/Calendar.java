@@ -40,7 +40,7 @@ public class Calendar extends AppCompatActivity {
         contextEditText=findViewById(R.id.contextEditText);
         //로그인 및 회원가입 엑티비티에서 이름을 받아옴
         Intent intent=getIntent();
-        String name=intent.getStringExtra("userName");
+        String name=intent.getStringExtra("NAME");
         final String userID=intent.getStringExtra("userID");
         textView3.setText(name+"님의 운동출석부");
 

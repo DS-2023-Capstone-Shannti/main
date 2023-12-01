@@ -6,93 +6,160 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:color="#FFFFFF"
-    android:background="#E5E5E5"
+    android:background="#FFFFFF"
     tools:context=".Mainpage">
 
     <ImageView
         android:id="@+id/shanntiImage"
         android:layout_width="match_parent"
-        android:layout_height="95dp"
+        android:layout_height="85dp"
         android:background="#FFFFFF"
         android:src="@drawable/shannti"
+        android:gravity="center_vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:id="@+id/profile"
-        android:layout_width="328dp"
-        android:layout_height="428dp"
-        android:layout_columnWeight="1"
-        android:background="#999999"
-        android:elevation="20dp"
-        android:gravity="center"
-        tools:layout_editor_absoluteX="26dp"
-        tools:layout_editor_absoluteY="135dp">
 
-        <ImageView
-            android:id="@+id/profileImage"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_marginTop="0dp"
-            android:src="@drawable/oldwomen" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/profileInfo"
+            android:id="@+id/sentence"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/profileImage"
-            android:layout_centerHorizontal="true"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="8dp"
-            android:text=" 샨티님\n오늘도 좋은 하루 되세요"
-            android:textColor="#000000"
+            android:layout_marginTop="108dp"
+            android:fontFamily="@font/myfont"
+            android:text="건강 건강 건강!"
             android:textSize="25sp"
-            android:textStyle="bold" />
-    </LinearLayout>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <GridLayout
+        <LinearLayout
+            android:id="@+id/profile"
+            android:layout_width="320dp"
+            android:layout_height="430dp"
+            android:layout_columnWeight="1"
+            android:background="@drawable/profile_background"
+            android:elevation="25dp"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.488"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.498">
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/profileImage"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/circle_shape"
+                    android:clipToOutline="true"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/oldwomen" />
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/profileImage"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/myfont"
+                    android:text="샨티"
+                    android:textColor="#000000"
+                    android:textSize="40sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/age"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/name"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/myfont"
+                    android:text="54세"
+                    android:textColor="#000000"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/age"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/myfont"
+                    android:text="가입날짜"
+                    android:textColor="#000000"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/d_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/date"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/myfont"
+                    android:text="D-day"
+                    android:textColor="#000000"
+                    android:textSize="25sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
         android:id="@+id/buttonContainer"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:columnCount="2"
-        android:rowCount="2"
+        android:layout_height="120dp"
         android:orientation="horizontal"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/space">
 
-        <!-- 자세 교정 버튼 -->
+        <!-- 첫 번째 버튼 -->
         <RelativeLayout
             android:id="@+id/pose_detection"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_columnWeight="1"
+            android:layout_weight="1"
             android:gravity="center">
 
             <!-- 배경 원 -->
             <ImageButton
                 android:id="@+id/posedetection_background"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:layout_centerInParent="true"
-                android:background="@drawable/button_background"
+                android:background="?android:selectableItemBackground"
                 android:contentDescription="자세교정 버튼"
                 android:src="@drawable/circle_background" />
 
             <!-- 실제 이미지 -->
             <ImageView
                 android:id="@+id/pose_image"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:layout_alignParentTop="true"
                 android:layout_centerInParent="true"
                 android:scaleType="centerInside"
                 android:src="@drawable/exercise" />
 
             <TextView
-                android:id="@+id/pose_text"
+                android:id="@+id/pose"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/posedetection_background"
@@ -101,41 +168,40 @@
                 android:text="자세교정"
                 android:fontFamily="@font/myfont"
                 android:textColor="#000000"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                />
+                android:textSize="14sp" />
         </RelativeLayout>
 
-        <!-- 운동 출석부 버튼 -->
+
+        <!-- 두 번째 버튼 -->
         <RelativeLayout
             android:id="@+id/exercise_calendar"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_columnWeight="1"
+            android:layout_weight="1"
             android:gravity="center">
 
             <!-- 배경 원 -->
             <ImageButton
                 android:id="@+id/calendar_background"
-                android:background="@drawable/buttonback"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:layout_centerInParent="true"
+                android:background="?android:selectableItemBackground"
                 android:contentDescription="운동출석부 버튼"
                 android:src="@drawable/circle_background" />
 
             <!-- 실제 이미지 -->
             <ImageView
                 android:id="@+id/calendar_image"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:layout_alignParentTop="true"
                 android:layout_centerInParent="true"
                 android:scaleType="centerInside"
                 android:src="@drawable/calendar" />
 
             <TextView
-                android:id="@+id/calendar_text"
+                android:id="@+id/calendar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/calendar_background"
@@ -144,96 +210,92 @@
                 android:text="운동출석부"
                 android:fontFamily="@font/myfont"
                 android:textColor="#000000"
-
-                android:textSize="25sp"
-                android:textStyle="bold" />
+                android:textSize="14sp" />
         </RelativeLayout>
 
-        <!-- 사물 인식 버튼 -->
+        <!-- 세 번째 버튼 -->
         <RelativeLayout
             android:id="@+id/object_detection"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_columnWeight="1"
+            android:layout_weight="1"
             android:gravity="center">
 
             <!-- 배경 원 -->
             <ImageButton
                 android:id="@+id/objectdetection_background"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:layout_centerInParent="true"
-                android:background="@drawable/buttonback"
+                android:background="?android:selectableItemBackground"
                 android:contentDescription="사물인식운동 버튼"
                 android:src="@drawable/circle_background" />
 
             <!-- 실제 이미지 -->
             <ImageView
                 android:id="@+id/objectdetection_image"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:layout_alignParentTop="true"
                 android:layout_centerInParent="true"
                 android:scaleType="centerInside"
                 android:src="@drawable/object" />
 
             <TextView
-                android:id="@+id/objectdetection_text"
+                android:id="@+id/objectdetection"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/objectdetection_background"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="8dp"
-                android:text="사물인식운동"
+                android:text="사물 인식 운동"
                 android:fontFamily="@font/myfont"
                 android:textColor="#000000"
-
-                android:textSize="25sp"
-                android:textStyle="bold"/>
+                android:textSize="14sp" />
         </RelativeLayout>
 
-        <!-- 게임 버튼 -->
+        <!-- 네 번째 버튼 -->
         <RelativeLayout
-            android:id="@+id/game"
+            android:id="@+id/game_detection"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_columnWeight="1"
+            android:layout_weight="1"
             android:gravity="center">
 
             <!-- 배경 원 -->
             <ImageButton
                 android:id="@+id/game_background"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:layout_centerInParent="true"
-                android:background="@drawable/buttonback"
-                android:contentDescription="게임 버튼"
+                android:background="?android:selectableItemBackground"
+                android:contentDescription="사물인식운동 버튼"
                 android:src="@drawable/circle_background" />
 
             <!-- 실제 이미지 -->
             <ImageView
                 android:id="@+id/game_image"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:layout_alignParentTop="true"
                 android:layout_centerInParent="true"
                 android:scaleType="centerInside"
                 android:src="@drawable/game" />
 
             <TextView
-                android:id="@+id/game_text"
+                android:id="@+id/game"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/game_background"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="8dp"
-                android:text="게임운동"
+                android:text="게임"
                 android:fontFamily="@font/myfont"
                 android:textColor="#000000"
-
-                android:textSize="25sp"
-                android:textStyle="bold" />
+                android:textSize="14sp" />
         </RelativeLayout>
-    </GridLayout>
+
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

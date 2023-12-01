@@ -8,74 +8,95 @@
     android:padding="15dp"
     tools:context=".PoseDetection">
 
-    <!-- 페이지 제목 -->
-    <TextView
-        android:id="@+id/pageTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="스쿼트"
-        android:textSize="35sp"
-        android:textColor="#000"
-        android:textStyle="bold"
-        android:fontFamily="@font/myfont"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintVertical_bias="0.1" />
-
-    <!-- 운동 이미지 -->
     <ImageView
-        android:id="@+id/exerciseImage"
-        android:layout_width="400dp"
-        android:layout_height="230dp"
-        android:src="@drawable/exercise"
-        app:layout_constraintTop_toBottomOf="@id/pageTitle"
-        app:layout_constraintBottom_toTopOf="@id/cameraPreview"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintDimensionRatio="1:2" />
+        android:id="@+id/shanntiImage"
+        android:layout_width="253dp"
+        android:layout_height="66dp"
+        android:background="#FFFFFF"
+        android:gravity="center_vertical"
+        android:src="@drawable/shannti"
+        tools:layout_editor_absoluteX="-12dp"
+        tools:layout_editor_absoluteY="-10dp" />
 
     <!-- 카메라 미리보기 -->
-    <TextureView
-        android:id="@+id/cameraPreview"
-        android:layout_width="400dp"
-        android:layout_height="300dp"
-        app:layout_constraintBottom_toTopOf="@id/countText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/exerciseImage"
-        app:layout_constraintDimensionRatio="1:2" />
+
+    <TextView
+        android:id="@+id/pageTitle"
+        android:layout_width="107dp"
+        android:layout_height="62dp"
+        android:fontFamily="@font/myfont"
+        android:text="스쿼트"
+        android:textColor="#4E8736"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="275dp"
+        tools:layout_editor_absoluteY="-6dp" />
 
     <!-- 카운트 텍스트 -->
 
-    <!-- 페이지 제목 -->
+    <!-- 포즈 텍스트 -->
+
+    <!-- 로그아웃 버튼 -->
+
+    <ImageView
+        android:id="@+id/exerciseImage"
+        android:layout_width="400dp"
+        android:layout_height="250dp"
+        android:src="@drawable/exercise"
+        app:layout_constraintDimensionRatio="1:2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="61dp" />
+
+    <TextureView
+        android:id="@+id/cameraPreview"
+        android:layout_width="400dp"
+        android:layout_height="250dp"
+        app:layout_constraintDimensionRatio="1:2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="316dp" />
 
     <TextView
         android:id="@+id/countText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:fontFamily="@font/myfont"
         android:text="45"
-        android:textColor="#000000"
-        android:textSize="50sp"
+        android:textColor="#4E8736"
+        android:textSize="45sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.273"
+        app:layout_constraintHorizontal_bias="0.288"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cameraPreview" />
+        tools:layout_editor_absoluteY="567dp" />
 
     <TextView
         android:id="@+id/pose"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="612dp"
+        android:layout_marginTop="568dp"
         android:fontFamily="@font/myfont"
         android:text="GREAT"
-        android:textColor="#000"
-        android:textSize="52sp"
+        android:textColor="#4E8736"
+        android:textSize="45sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.723"
+        app:layout_constraintHorizontal_bias="0.716"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <android.widget.Button
+        android:id="@+id/btn_logout"
+        android:layout_width="260dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/button_background"
+        android:text="메인화면으로 돌아가기"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pose" />
 </androidx.constraintlayout.widget.ConstraintLayout>

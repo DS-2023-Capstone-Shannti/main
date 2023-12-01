@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/shanntiImage"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:background="#FFFFFF"
+        android:src="@drawable/shannti"
+        android:gravity="center_vertical"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="60dp" />
+
+
+    <TextView
+        android:id="@+id/countText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="@font/myfont"
+        android:text="건강한 하루를 시작할까요?"
+        android:textColor="#4E8736"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.288"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="567dp" />
+
+    <EditText
+        android:id="@+id/Edt_id"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:hint="이메일"
+        android:layout_marginTop="65dp" />
+
+    <EditText
+        android:id="@+id/Edt_pw"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="비밀번호"
+        android:layout_marginTop="8dp" />
+
+
+    <android.widget.Button
+        android:id="@+id/Btn_signup"
+        android:layout_width="260dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/button_background"
+        android:text="로그인하기"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+</LinearLayout>
