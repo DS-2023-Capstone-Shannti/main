@@ -68,22 +68,22 @@
         android:textSize="45sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.288"
+        app:layout_constraintHorizontal_bias="0.286"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="567dp" />
+        tools:layout_editor_absoluteY="574dp" />
 
     <TextView
         android:id="@+id/pose"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="568dp"
+        android:layout_marginTop="572dp"
         android:fontFamily="@font/myfont"
         android:text="GREAT"
         android:textColor="#4E8736"
         android:textSize="45sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.716"
+        app:layout_constraintHorizontal_bias="0.683"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -91,8 +91,8 @@
         android:id="@+id/btn_logout"
         android:layout_width="260dp"
         android:layout_height="60dp"
-        android:layout_marginStart="76dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/button_background"
         android:text="메인화면으로 돌아가기"
         android:textSize="20sp"
