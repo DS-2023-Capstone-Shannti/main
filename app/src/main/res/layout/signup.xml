@@ -24,7 +24,7 @@
         android:ems="10"
         android:inputType="textEmailAddress"
         android:hint="이메일"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="11dp" />
 
     <EditText
         android:id="@+id/Edt_pw"
@@ -33,7 +33,7 @@
         android:ems="10"
         android:inputType="textPassword"
         android:hint="비밀번호"
-        android:layout_marginTop="8dp" />
+        android:layout_marginTop="12dp" />
 
     <EditText
         android:id="@+id/Edt_name"
@@ -42,7 +42,7 @@
         android:ems="10"
         android:inputType="text"
         android:hint="이름"
-        android:layout_marginTop="12dp" />
+        android:layout_marginTop="13dp" />
 
     <EditText
         android:id="@+id/Edt_age"

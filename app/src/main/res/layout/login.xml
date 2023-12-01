@@ -40,7 +40,7 @@
         android:ems="10"
         android:inputType="textEmailAddress"
         android:hint="이메일"
-        android:layout_marginTop="65dp" />
+        android:layout_marginTop="63dp" />
 
     <EditText
         android:id="@+id/Edt_pw"
