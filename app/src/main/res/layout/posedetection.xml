@@ -8,14 +8,6 @@
     android:padding="15dp"
     tools:context=".PoseDetection">
 
-    <!-- 카메라 미리보기 -->
-
-    <!-- 카운트 텍스트 -->
-
-    <!-- 포즈 텍스트 -->
-
-    <!-- 로그아웃 버튼 -->
-
     <ImageView
         android:id="@+id/shanntiImage"
         android:layout_width="184dp"
