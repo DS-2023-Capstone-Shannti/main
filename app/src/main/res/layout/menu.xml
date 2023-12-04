@@ -1,0 +1,62 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+    <ImageView
+        android:id="@+id/shanntiImage"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:background="#FFFFFF"
+        android:src="@drawable/shannti"
+        android:gravity="center_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.widget.Button
+        android:id="@+id/btn_gomain"
+        android:layout_width="338dp"
+        android:layout_height="62dp"
+        android:background="@drawable/button_background"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="메인으로 돌아가기"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="-4dp" />
+
+    <android.widget.Button
+        android:id="@+id/btn_next"
+        android:layout_width="338dp"
+        android:layout_height="62dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/button_background"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="다음 운동 진행하기"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="-4dp" />
+
+    <android.widget.Button
+        android:id="@+id/btn_continue"
+        android:layout_width="338dp"
+        android:layout_marginBottom="20dp"
+        android:layout_height="62dp"
+        android:text="계속 진행하기"
+        android:background="@drawable/button_background"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="-4dp" />
+</LinearLayout>

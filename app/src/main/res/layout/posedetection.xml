@@ -8,16 +8,6 @@
     android:padding="15dp"
     tools:context=".PoseDetection">
 
-    <ImageView
-        android:id="@+id/shanntiImage"
-        android:layout_width="184dp"
-        android:layout_height="57dp"
-        android:background="#FFFFFF"
-        android:gravity="center_vertical"
-        android:src="@drawable/shannti"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="-2dp" />
-
     <TextView
         android:id="@+id/pageTitle"
         android:layout_width="107dp"
@@ -27,30 +17,30 @@
         android:textColor="#4E8736"
         android:textSize="45sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="200dp"
-        tools:layout_editor_absoluteY="-2dp" />
+        tools:layout_editor_absoluteX="223dp"
+        tools:layout_editor_absoluteY="3dp" />
 
     <ImageView
         android:id="@+id/exerciseImage"
-        android:layout_width="340dp"
-        android:layout_height="320dp"
+        android:layout_width="346dp"
+        android:layout_height="395dp"
         android:layout_marginEnd="10dp"
         android:src="@drawable/exercise"
         app:layout_constraintDimensionRatio="1:2"
         app:layout_constraintEnd_toStartOf="@+id/cameraPreview"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="72dp" />
+        tools:layout_editor_absoluteY="-5dp" />
 
     <TextureView
         android:id="@+id/cameraPreview"
         android:layout_width="340dp"
-        android:layout_height="320dp"
+        android:layout_height="400dp"
         app:layout_constraintDimensionRatio="1:2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="71dp" />
+        tools:layout_editor_absoluteY="-7dp" />
 
     <TextView
         android:id="@+id/countText"
@@ -81,16 +71,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <android.widget.Button
-        android:id="@+id/btn_logout"
-        android:layout_width="338dp"
-        android:layout_height="62dp"
-        android:background="@drawable/button_background"
-        android:text="메인화면으로 돌아가기"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="-4dp" />
+    <ImageButton
+        android:id="@+id/btn_menu"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_margin="16dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        android:src="@drawable/menu"
+        tools:layout_editor_absoluteX="628dp"
+        tools:layout_editor_absoluteY="-2dp" /> <!-- fitCenter, centerCrop, 등을 시도해보세요 -->
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
