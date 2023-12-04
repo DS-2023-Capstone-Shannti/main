@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#FFFF00"/> <!-- 배경색을 지정하세요 -->
+        </shape>
+    </item>
+    <item android:left="2dp" android:right="2dp" android:top="2dp" android:bottom="2dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#00FFFFFF"/> <!-- 투명한 영역을 만들어 형관펜 효과를 주세요 -->
+        </shape>
+    </item>
+</layer-list>

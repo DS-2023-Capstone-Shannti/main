@@ -51,23 +51,21 @@
         android:textColor="#4E8736"
         android:textSize="45sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.286"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="574dp" />
+        tools:layout_editor_absoluteX="378dp"
+        tools:layout_editor_absoluteY="332dp" />
 
     <TextView
         android:id="@+id/pose"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="572dp"
+        android:layout_marginTop="332dp"
         android:fontFamily="@font/myfont"
         android:text="GREAT"
         android:textColor="#4E8736"
         android:textSize="45sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.683"
+        app:layout_constraintHorizontal_bias="0.778"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

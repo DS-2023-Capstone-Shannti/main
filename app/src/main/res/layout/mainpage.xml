@@ -24,50 +24,39 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="204dp"
+        tools:layout_editor_absoluteY="69dp">
 
-        <TextView
-            android:id="@+id/sentence"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="108dp"
-            android:fontFamily="@font/myfont"
-            android:text="건강 건강 건강!"
-            android:textSize="25sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
         <LinearLayout
             android:id="@+id/profile"
-            android:layout_width="320dp"
-            android:layout_height="430dp"
+            android:layout_width="334dp"
+            android:layout_height="183dp"
             android:layout_columnWeight="1"
             android:background="@drawable/profile_background"
             android:elevation="25dp"
             android:gravity="center"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.488"
+            app:layout_constraintHorizontal_bias="0.113"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.498">
+            app:layout_constraintVertical_bias="0.403">
 
+
+            <ImageView
+                android:id="@+id/profileImage"
+                android:layout_width="134dp"
+                android:layout_height="115dp"
+                android:background="@drawable/circle_shape"
+                android:clipToOutline="true"
+                android:scaleType="centerInside"
+                android:src="@drawable/oldwomen" />
 
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
-
-                <ImageView
-                    android:id="@+id/profileImage"
-                    android:layout_width="200dp"
-                    android:layout_height="200dp"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerInParent="true"
-                    android:background="@drawable/circle_shape"
-                    android:clipToOutline="true"
-                    android:scaleType="centerInside"
-                    android:src="@drawable/oldwomen" />
 
                 <TextView
                     android:id="@+id/name"
@@ -115,8 +104,22 @@
                     android:text="D-day"
                     android:textColor="#000000"
                     android:textSize="25sp" />
+
             </RelativeLayout>
+
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/sentence"
+            android:layout_width="190dp"
+            android:layout_height="119dp"
+            android:fontFamily="@font/myfont"
+            android:lineSpacingExtra="8dp"
+            android:text="정확하게 반복하고 \n 허세없이 운동해라.\n -제이커틀러-"
+            android:textColor="#000000"
+            android:textSize="25sp"
+            tools:layout_editor_absoluteX="465dp"
+            tools:layout_editor_absoluteY="137dp" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -128,7 +131,7 @@
         android:layout_height="120dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/space">
+        android:background="#e9ecef" >
 
         <!-- 첫 번째 버튼 -->
         <RelativeLayout
@@ -146,7 +149,7 @@
                 android:layout_centerInParent="true"
                 android:background="?android:selectableItemBackground"
                 android:contentDescription="자세교정 버튼"
-                android:src="@drawable/circle_background" />
+                android:src="@drawable/circle_background"/>
 
             <!-- 실제 이미지 -->
             <ImageView
@@ -168,7 +171,7 @@
                 android:text="자세교정"
                 android:fontFamily="@font/myfont"
                 android:textColor="#000000"
-                android:textSize="14sp" />
+                android:textSize="20sp" />
         </RelativeLayout>
 
 
@@ -210,7 +213,7 @@
                 android:text="운동출석부"
                 android:fontFamily="@font/myfont"
                 android:textColor="#000000"
-                android:textSize="14sp" />
+                android:textSize="20sp" />
         </RelativeLayout>
 
         <!-- 세 번째 버튼 -->
@@ -251,7 +254,7 @@
                 android:text="사물 인식 운동"
                 android:fontFamily="@font/myfont"
                 android:textColor="#000000"
-                android:textSize="14sp" />
+                android:textSize="20sp" />
         </RelativeLayout>
 
         <!-- 네 번째 버튼 -->
@@ -292,7 +295,7 @@
                 android:text="게임"
                 android:fontFamily="@font/myfont"
                 android:textColor="#000000"
-                android:textSize="14sp" />
+                android:textSize="20sp" />
         </RelativeLayout>
 
 
