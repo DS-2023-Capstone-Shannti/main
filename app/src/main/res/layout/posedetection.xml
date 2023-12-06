@@ -8,6 +8,13 @@
     android:padding="15dp"
     tools:context=".PoseDetection">
 
+    <VideoView
+        android:id="@+id/squatVideoView"
+        android:layout_width="340dp"
+        android:layout_height="400dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="-12dp" />
+
     <TextView
         android:id="@+id/pageTitle"
         android:layout_width="107dp"
@@ -20,18 +27,6 @@
         tools:layout_editor_absoluteX="223dp"
         tools:layout_editor_absoluteY="3dp" />
 
-    <ImageView
-        android:id="@+id/exerciseImage"
-        android:layout_width="346dp"
-        android:layout_height="395dp"
-        android:layout_marginEnd="10dp"
-        android:src="@drawable/exercise"
-        app:layout_constraintDimensionRatio="1:2"
-        app:layout_constraintEnd_toStartOf="@+id/cameraPreview"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="-5dp" />
-
     <TextureView
         android:id="@+id/cameraPreview"
         android:layout_width="340dp"
@@ -40,7 +35,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="-7dp" />
+        tools:layout_editor_absoluteY="-14dp" />
 
     <TextView
         android:id="@+id/countText"
@@ -77,8 +72,8 @@
         android:background="@android:color/transparent"
         android:scaleType="fitCenter"
         android:src="@drawable/menu"
-        tools:layout_editor_absoluteX="628dp"
-        tools:layout_editor_absoluteY="-2dp" /> <!-- fitCenter, centerCrop, 등을 시도해보세요 -->
+        tools:layout_editor_absoluteX="606dp"
+        tools:layout_editor_absoluteY="10dp" />
 
 
 

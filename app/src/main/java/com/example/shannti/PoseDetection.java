@@ -19,11 +19,22 @@ import android.util.Size;
 import android.view.Surface;
 import android.view.TextureView;
 import android.widget.Toast;
+import android.hardware.camera2.CameraMetadata;
+import java.util.Comparator;
+import android.hardware.camera2.CameraCaptureSession;
+import android.hardware.camera2.params.StreamConfigurationMap;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+
+import android.graphics.ImageFormat;
+import android.media.CamcorderProfile;
+import android.media.MediaRecorder;
+import android.view.SurfaceView;
+import android.widget.VideoView;
+import android.hardware.camera2.CameraCharacteristics;
 
 import java.util.Arrays;
 
@@ -37,6 +48,11 @@ public class PoseDetection extends AppCompatActivity {
     private HandlerThread backgroundThread;
     private ImageReader imageReader;
 
+    private SurfaceView videoSurfaceView;
+
+
+    private VideoView squatVideoView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,18 +60,75 @@ public class PoseDetection extends AppCompatActivity {
 
         // TextureView 초기화
         cameraPreview = findViewById(R.id.cameraPreview);
+        squatVideoView = findViewById(R.id.squatVideoView);
+        videoSurfaceView = findViewById(R.id.squatVideoView);
 
-        // 카메라 권한 확인
+
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA)
                 != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this,
-                    new String[]{Manifest.permission.CAMERA},
-                    MY_CAMERA_PERMISSION_CODE);
+            // 권한이 없는 경우
+            if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.CAMERA)) {
+                // 사용자가 이전에 권한을 거부한 경우, 권한에 대한 설명 등을 보여줄 수 있음
+                // 이 예제에서는 간단히 다시 권한을 요청
+                ActivityCompat.requestPermissions(this,
+                        new String[]{Manifest.permission.CAMERA},
+                        MY_CAMERA_PERMISSION_CODE);
+            } else {
+                // 사용자가 권한 요청을 거부한 적이 없는 경우, 바로 권한 요청
+                ActivityCompat.requestPermissions(this,
+                        new String[]{Manifest.permission.CAMERA},
+                        MY_CAMERA_PERMISSION_CODE);
+            }
         } else {
             // 권한이 이미 허용되었을 때 수행할 작업
             initializeCamera();
+            initializeVideoView();
+        }
+
+
+    }
+
+    private void initializeVideoView() {
+        squatVideoView.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.squat);
+        squatVideoView.start();
+    }
+
+    private void createCameraPreviewSession() {
+        try {
+            SurfaceTexture surfaceTexture = cameraPreview.getSurfaceTexture();
+            surfaceTexture.setDefaultBufferSize(imageReader.getWidth(), imageReader.getHeight());
+            Surface previewSurface = new Surface(surfaceTexture);
+            Surface imageReaderSurface = imageReader.getSurface();
+            Surface videoSurface = new Surface(SurfaceView.getHolder().getSurface()); // VideoView Surface 추가
+
+            captureRequestBuilder = cameraDevice.createCaptureRequest(CameraDevice.TEMPLATE_PREVIEW);
+            captureRequestBuilder.addTarget(previewSurface);
+            captureRequestBuilder.addTarget(imageReaderSurface);
+            captureRequestBuilder.addTarget(videoSurface); // VideoView Surface 추가
+
+            cameraDevice.createCaptureSession(
+                    Arrays.asList(previewSurface, imageReaderSurface, videoSurface),
+                    new CameraCaptureSession.StateCallback() {
+                        @Override
+                        public void onConfigured(@NonNull CameraCaptureSession session) {
+                            if (cameraDevice == null) {
+                                return;
+                            }
+
+                            cameraCaptureSession = session;
+                            updatePreview();
+                        }
+
+                        @Override
+                        public void onConfigureFailed(@NonNull CameraCaptureSession session) {
+                            Toast.makeText(PoseDetection.this, "카메라 구성 실패", Toast.LENGTH_SHORT).show();
+                        }
+                    }, null);
+        } catch (CameraAccessException e) {
+            e.printStackTrace();
         }
     }
+
 
     private void initializeCamera() {
         // TextureView의 SurfaceTextureListener 설정
@@ -175,6 +248,13 @@ public class PoseDetection extends AppCompatActivity {
         }
     }
 
+    private static class CompareSizesByArea implements Comparator<Size> {
+        @Override
+        public int compare(Size lhs, Size rhs) {
+            return Long.signum((long) lhs.getWidth() * lhs.getHeight() -
+                    (long) rhs.getWidth() * rhs.getHeight());
+        }
+    }
     private Size chooseOptimalSize(Size[] choices, int width, int height) {
         List<Size> bigEnough = new ArrayList<>();
         for (Size option : choices) {
