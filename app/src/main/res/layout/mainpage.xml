@@ -21,109 +21,104 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="204dp"
-        tools:layout_editor_absoluteY="69dp">
-
-
-        <LinearLayout
-            android:id="@+id/profile"
-            android:layout_width="334dp"
-            android:layout_height="183dp"
-            android:layout_columnWeight="1"
-            android:background="@drawable/profile_background"
-            android:elevation="25dp"
-            android:gravity="center"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.113"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.403">
+    <LinearLayout
+        android:id="@+id/profile"
+        android:layout_width="334dp"
+        android:layout_height="183dp"
+        android:layout_columnWeight="1"
+        android:background="@drawable/profile_background"
+        android:elevation="25dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.113"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.403">
 
 
-            <ImageView
-                android:id="@+id/profileImage"
-                android:layout_width="134dp"
-                android:layout_height="115dp"
-                android:background="@drawable/circle_shape"
-                android:clipToOutline="true"
-                android:scaleType="centerInside"
-                android:src="@drawable/oldwomen" />
+        <ImageView
+            android:id="@+id/profileImage"
+            android:layout_width="134dp"
+            android:layout_height="115dp"
+            android:background="@drawable/circle_shape"
+            android:clipToOutline="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/oldwomen" />
 
-            <RelativeLayout
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/name"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/myfont"
+                android:text="샨티"
+                android:textColor="#000000"
+                android:textSize="40sp"
+                android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/profileImage"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/myfont"
-                    android:text="샨티"
-                    android:textColor="#000000"
-                    android:textSize="40sp"
-                    android:textStyle="bold" />
+            <TextView
+                android:id="@+id/age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/name"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/myfont"
+                android:text="54세"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/age"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/name"
-                    android:layout_centerHorizontal="true"
-                    android:fontFamily="@font/myfont"
-                    android:text="54세"
-                    android:textColor="#000000"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/age"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/myfont"
+                android:text="가입날짜"
+                android:textColor="#000000"
+                android:textSize="25sp" />
 
-                <TextView
-                    android:id="@+id/date"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/age"
-                    android:layout_centerHorizontal="true"
-                    android:fontFamily="@font/myfont"
-                    android:text="가입날짜"
-                    android:textColor="#000000"
-                    android:textSize="25sp" />
+            <TextView
+                android:id="@+id/d_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/date"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/myfont"
+                android:text="D-day"
+                android:textColor="#000000"
+                android:textSize="25sp" />
 
-                <TextView
-                    android:id="@+id/d_day"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/date"
-                    android:layout_centerHorizontal="true"
-                    android:fontFamily="@font/myfont"
-                    android:text="D-day"
-                    android:textColor="#000000"
-                    android:textSize="25sp" />
-
-            </RelativeLayout>
-
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/sentence"
-            android:layout_width="190dp"
-            android:layout_height="119dp"
-            android:fontFamily="@font/myfont"
-            android:lineSpacingExtra="8dp"
-            android:text="정확하게 반복하고 \n 허세없이 운동해라.\n -제이커틀러-"
-            android:textColor="#000000"
-            android:textSize="25sp"
-            tools:layout_editor_absoluteX="465dp"
-            tools:layout_editor_absoluteY="137dp" />
+        </RelativeLayout>
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 
+
+    <TextView
+        android:id="@+id/sentence"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:fontFamily="@font/myfont"
+        android:lineSpacingExtra="8dp"
+        android:padding="15dp"
+        android:text="정확하게 반복하고 \n 허세없이 운동해라.\n -제이커틀러-"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.566"
+        app:layout_constraintStart_toEndOf="@+id/profile"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.72" />
 
     <LinearLayout
         android:id="@+id/buttonContainer"
@@ -300,5 +295,4 @@
 
 
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
