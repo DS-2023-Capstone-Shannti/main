@@ -24,8 +24,8 @@
         android:textColor="#4E8736"
         android:textSize="45sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="708dp"
-        tools:layout_editor_absoluteY="157dp" />
+        tools:layout_editor_absoluteX="645dp"
+        tools:layout_editor_absoluteY="156dp" />
 
     <TextureView
         android:id="@+id/cameraPreview"
@@ -46,21 +46,21 @@
         android:textColor="#4E8736"
         android:textSize="45sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="749dp"
-        tools:layout_editor_absoluteY="243dp" />
+        tools:layout_editor_absoluteX="703dp"
+        tools:layout_editor_absoluteY="233dp" />
 
     <TextView
         android:id="@+id/pose"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="312dp"
+        android:layout_marginTop="316dp"
         android:fontFamily="@font/myfont"
         android:text="GREAT"
         android:textColor="#4E8736"
         android:textSize="45sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.888"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
