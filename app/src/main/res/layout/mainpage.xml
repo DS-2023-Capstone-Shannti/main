@@ -11,15 +11,16 @@
 
     <ImageView
         android:id="@+id/shanntiImage"
-        android:layout_width="match_parent"
-        android:layout_height="85dp"
+        android:layout_width="850dp"
+        android:layout_height="55dp"
         android:background="#FFFFFF"
-        android:src="@drawable/shannti"
         android:gravity="center_vertical"
+        android:src="@drawable/shannti"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 
     <LinearLayout
         android:id="@+id/profile"
@@ -31,10 +32,10 @@
         android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.113"
+        app:layout_constraintHorizontal_bias="0.123"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.403">
+        app:layout_constraintVertical_bias="0.312">
 
 
         <ImageView
@@ -101,7 +102,6 @@
 
     </LinearLayout>
 
-
     <TextView
         android:id="@+id/sentence"
         android:layout_width="0dp"
@@ -115,10 +115,10 @@
         android:textSize="25sp"
         app:layout_constraintBottom_toTopOf="@+id/buttonContainer"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.566"
+        app:layout_constraintHorizontal_bias="0.912"
         app:layout_constraintStart_toEndOf="@+id/profile"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.72" />
+        app:layout_constraintVertical_bias="0.606" />
 
     <LinearLayout
         android:id="@+id/buttonContainer"

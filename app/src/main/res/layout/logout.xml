@@ -22,7 +22,7 @@
         android:id="@+id/countText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
+        android:layout_marginLeft="250dp"
         android:fontFamily="@font/myfont"
         android:text="오늘도 수고하셨습니다."
         android:textColor="#4E8736"
@@ -33,12 +33,12 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="567dp" />
 
-
     <android.widget.Button
         android:id="@+id/Btn_signup"
-        android:layout_width="260dp"
-        android:layout_height="60dp"
+        android:layout_width="450dp"
+        android:layout_height="65dp"
         android:layout_marginStart="65dp"
+        android:layout_marginLeft="250dp"
         android:layout_marginTop="50dp"
         android:background="@drawable/button_background"
         android:text="샨티 종료하기"

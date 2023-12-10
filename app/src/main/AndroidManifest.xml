@@ -37,6 +37,8 @@
         <activity android:name=".ObjectDetection" />
         <activity android:name=".MenuActivity" />
         <activity android:name=".Video" />
+        <activity android:name=".SimilarityClassifier" />
+        <activity android:name=".splash_screen" />
     </application>
 
 </manifest>
